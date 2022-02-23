@@ -24,7 +24,7 @@ You can omit output file name, in that case assembler would replace extension of
 
 ## Module/Programmatic Usage
 
-npm-check-updates can be required as a module:
+i40xx-asm can be required as a module:
 
 ```js
 const parse = require('i40xx-asm');
