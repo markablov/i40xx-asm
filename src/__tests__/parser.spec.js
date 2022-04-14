@@ -23,7 +23,19 @@ describe('One-byte instructions without arguments', () => {
   test('NOP instruction', () => matchParseResults('nop', [0x00]));
 
   instructions.forEach(
-    (mnemonic, idx) => test(`${mnemonic.toUpperCase()} instruction`, () => matchParseResults(mnemonic, [OPCODE_BASE + idx])),
+    (instr, idx) => test(`${instr.toUpperCase()} instruction`, () => matchParseResults(instr, [OPCODE_BASE + idx])),
+  );
+});
+
+describe('Intel 4040 instructions', () => {
+  const OPCODE_BASE = 0x01;
+
+  const instructions = [
+    'hlt', 'bbs', 'lcr', 'or4', 'or5', 'an6', 'an7', 'db0', 'db1', 'sb0', 'sb1', 'ein', 'din', 'rpm',
+  ];
+
+  instructions.forEach(
+    (instr, idx) => test(`${instr.toUpperCase()} instruction`, () => matchParseResults(instr, [OPCODE_BASE + idx])),
   );
 });
 
