@@ -97,6 +97,20 @@ class AsmParser extends EmbeddedActionsParser {
         { ALT: () => $.CONSUME(Tokens.InstructionTCS) },
         { ALT: () => $.CONSUME(Tokens.InstructionKBP) },
         { ALT: () => $.CONSUME(Tokens.InstructionDCL) },
+        { ALT: () => $.CONSUME(Tokens.InstructionHLT) },
+        { ALT: () => $.CONSUME(Tokens.InstructionBBS) },
+        { ALT: () => $.CONSUME(Tokens.InstructionLCR) },
+        { ALT: () => $.CONSUME(Tokens.InstructionOR4) },
+        { ALT: () => $.CONSUME(Tokens.InstructionOR5) },
+        { ALT: () => $.CONSUME(Tokens.InstructionAN6) },
+        { ALT: () => $.CONSUME(Tokens.InstructionAN7) },
+        { ALT: () => $.CONSUME(Tokens.InstructionDB0) },
+        { ALT: () => $.CONSUME(Tokens.InstructionDB1) },
+        { ALT: () => $.CONSUME(Tokens.InstructionSB0) },
+        { ALT: () => $.CONSUME(Tokens.InstructionSB1) },
+        { ALT: () => $.CONSUME(Tokens.InstructionEIN) },
+        { ALT: () => $.CONSUME(Tokens.InstructionDIN) },
+        { ALT: () => $.CONSUME(Tokens.InstructionRPM) },
       ]);
 
       $.ACTION(() => {
