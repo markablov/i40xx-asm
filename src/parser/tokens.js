@@ -17,11 +17,10 @@ addToken('Comment', { pattern: /(?:#|(?:\/\/))[^\n\r]*/, group: Lexer.SKIPPED })
 addToken('WhiteSpace', { pattern: /\s+/, group: Lexer.SKIPPED });
 
 const instructions = [
-  'nop', 'rdm', 'rd0', 'rd1', 'rd2', 'rd3', 'rdr', 'wrm', 'wr0', 'wr1', 'wr2',
-  'wr3', 'wrr', 'wmp', 'adm', 'sbm', 'clb', 'clc', 'cmc', 'stc', 'cma', 'iac',
-  'dac', 'ral', 'rar', 'tcc', 'daa', 'tcs', 'kbp', 'dcl', 'ldm', 'ld', 'xch',
-  'add', 'sub', 'inc', 'bbl', 'jin', 'src', 'fin', 'jun', 'jms', 'jcn', 'isz',
-  'fim', 'wpm',
+  'nop', 'rdm', 'rd0', 'rd1', 'rd2', 'rd3', 'rdr', 'wrm', 'wr0', 'wr1', 'wr2', 'wr3', 'wrr', 'wmp', 'adm', 'sbm', 'clb',
+  'clc', 'cmc', 'stc', 'cma', 'iac', 'dac', 'ral', 'rar', 'tcc', 'daa', 'tcs', 'kbp', 'dcl', 'ldm', 'ld', 'xch', 'add',
+  'sub', 'inc', 'bbl', 'jin', 'src', 'fin', 'jun', 'jms', 'jcn', 'isz', 'fim', 'wpm', 'hlt', 'bbs', 'lcr', 'or4', 'or5',
+  'an6', 'an7', 'db0', 'db1', 'sb0', 'sb1', 'ein', 'din', 'rpm',
 ];
 for (const instruction of instructions) {
   addToken(`Instruction${instruction.toUpperCase()}`, { pattern: new RegExp(instruction), longer_alt: labelToken });
